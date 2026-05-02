@@ -44,5 +44,33 @@ git --version
 # instalar git usando winget en windows
 winget install --id Git.Git -e --source winget
 
+# inicializar git en la carpeta local del proyecto
+git init
+
+# conectar el repo local con el repo remoto de github
+git remote add origin https://github.com/ptello-rgb/qa-portfolio-saucedemo.git
+
+# corregir o actualizar la url del repo remoto
+git remote set-url origin https://github.com/ptello-rgb/qa-portfolio-saucedemo.git
+
+# definir la rama principal como main
+git branch -M main
+
+# revisar el estado del repo local
+git status
+
+# preparar todos los cambios para commit
+git add .
+
+# guardar los cambios preparados en un commit local
+git commit -m "Add SauceDemo UI automation project"
+
+# subir commits locales a github
+git push -u origin main
+
+# subir forzando el remoto para reemplazar su contenido
+git push -u origin main --force
+
 # descargar un repo desde github a una carpeta local
 git clone https://github.com/ptello-rgb/qa-portfolio-saucedemo.git saucedemo-repo
+
